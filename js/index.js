@@ -1,9 +1,27 @@
-// Rotate image
-const advImg = document.querySelector("#adventure-img");
+// Rotate image ========================================
 
-advImg.addEventListener("click", (event) => {
-  advImg.style.transform = "rotate(25deg)";
-});
+const bodyImg1 = document.querySelector("#img-1");
+const bodyImg2 = document.querySelector("#img-2");
+// heroImg1.addEventListener("mouseover", (event) => {
+//   heroImg1.style.transform = "rotate(-5deg)";
+// });
+
+// heroImg1.addEventListener("mouseout", (event) => {
+//   heroImg1.style.transform = "rotate(0deg)";
+// });
+
+function rotate(event) {
+  event.target.style.transform = "rotate(-5deg)";
+}
+
+function rotateReverse(event) {
+  event.target.style.transform = "rotate(0deg)";
+}
+
+bodyImg1.addEventListener("mouseover", rotate);
+bodyImg1.addEventListener("mouseout", rotateReverse);
+bodyImg2.addEventListener("mouseover", rotate);
+bodyImg2.addEventListener("mouseout", rotateReverse);
 
 // advImg.addEventListener(‘dblclick’, () => {
 //     if (event.type === ‘dblclick’) {
@@ -11,7 +29,7 @@ advImg.addEventListener("click", (event) => {
 //     }
 // });
 
-// Change h1 text Color
+// Change h1 text Color ===================================
 const headingColor = document.querySelector(".logo-heading");
 
 headingColor.addEventListener("mouseover", (e) => {
