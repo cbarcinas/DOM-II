@@ -3,6 +3,8 @@
 const bodyImg1 = document.querySelector("#img-1");
 const bodyImg2 = document.querySelector("#img-2");
 
+gsap.from("img", { opacity: 1, duration: 0.5, y: -50 });
+
 function rotate(event) {
   event.target.style.transform = "rotate(-5deg)";
 }
