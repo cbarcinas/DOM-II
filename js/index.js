@@ -2,18 +2,10 @@
 
 const bodyImg1 = document.querySelector("#img-1");
 const bodyImg2 = document.querySelector("#img-2");
-// heroImg1.addEventListener("mouseover", (event) => {
-//   heroImg1.style.transform = "rotate(-5deg)";
-// });
-
-// heroImg1.addEventListener("mouseout", (event) => {
-//   heroImg1.style.transform = "rotate(0deg)";
-// });
 
 function rotate(event) {
   event.target.style.transform = "rotate(-5deg)";
 }
-
 function rotateReverse(event) {
   event.target.style.transform = "rotate(0deg)";
 }
