@@ -16,7 +16,7 @@ gsap.from("img", {
   opacity: 1,
   duration: 2.5,
   x: 50,
-  ease: "bounce.easeInOut",
+  ease: "fade.easeInOut",
 });
 
 function rotate(event) {
@@ -48,16 +48,20 @@ headingColor.addEventListener("mouseout", (e) => {
 
 gsap.from(".para-1", {
   opacity: 0,
-  duration: 2.5,
-  x: -100,
+  duration: 2,
+  x: -150,
   ease: "bounce.easeInOut",
+  scrollTrigger: ".para-1", // starts animation when 'key' enters the viewport(once)
+  x: -500,
 });
 
 gsap.from(".para-2", {
   opacity: 0,
-  duration: 2.5,
+  duration: 2,
   x: 100,
   ease: "bounce.easeInOut",
+  scrollTrigger: ".para-1", // starts animation when 'key' enters the viewport(once)
+  x: 500,
 });
 
 // onscroll animation ======================================
